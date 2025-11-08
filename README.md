@@ -213,6 +213,73 @@ neko-memory-system/
     └── my-project/CLAUDE.md
 ```
 
+## 🧪 Testing
+
+### Comprehensive Test Suite
+
+The memory system includes a comprehensive test framework validating efficiency with real-world scenarios.
+
+```bash
+# Run all tests
+npm test
+
+# Run unit tests only
+npm run test:unit
+
+# Run integration tests
+npm run test:integration
+
+# Run performance benchmarks
+npm test -- tests/benchmarks
+
+# Run with coverage
+npm run test:coverage
+```
+
+### Test Coverage
+
+**Unit Tests** (`tests/unit/`):
+- Memory operations: CREATE, READ, UPDATE, DELETE, APPEND, LIST
+- Performance requirements: < 50ms per operation
+- Concurrent operations: 100+ simultaneous
+- Large files: 1MB+ support
+
+**Integration Tests** (`tests/integration/`):
+- Cross-session persistence: Memories survive restarts
+- Personality isolation: Separate memory spaces
+- Knowledge building: Accumulate over multiple sessions
+- Crash recovery: Data integrity maintained
+
+**Performance Benchmarks** (`tests/benchmarks/`):
+- 1000+ operations/second throughput
+- 10,000 file scalability
+- 100-turn conversation simulation
+- Context editing validation (84% token reduction)
+
+**Real-World Scenarios**:
+- Software development assistant (multi-day project)
+- Research assistant (source aggregation)
+- Data analysis (100+ file processing)
+- Long-running conversations (100+ turns)
+
+### Test Data
+
+All tests use **GENERIC/FAKE data only**:
+- Project names: "Modern E-Commerce Platform"
+- Usernames: "user123", "dev4567"
+- Emails: "test@example.com"
+- NO real personal information or credentials
+
+See [tests/README.md](tests/README.md) for detailed testing documentation.
+
+### Performance Metrics Validated
+
+Based on Anthropic's benchmarks:
+- ✅ Memory + Context Editing: +39% performance
+- ✅ Context Editing alone: +29% performance
+- ✅ Token reduction: 84% in long conversations
+- ✅ Cross-session retrieval: < 100ms
+
 ## 🔒 Security
 
 **CRITICAL: Never commit sensitive data!**
