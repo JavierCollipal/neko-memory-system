@@ -1,0 +1,148 @@
+# ===============================================
+# NEKO MEMORY SYSTEM - COMPREHENSIVE .GITIGNORE
+# ===============================================
+# This file prevents sensitive data from being committed
+# to the repository. CRITICAL for security!
+
+# ===== ENVIRONMENT FILES (CRITICAL!) =====
+.env
+.env.*
+!.env.example
+.env.local
+.env.development
+.env.test
+.env.production
+.env.staging
+*.env
+
+# ===== CREDENTIALS & SECRETS =====
+secrets/
+secrets.json
+credentials.json
+*.key
+*.pem
+*.cert
+*.crt
+*.p12
+*.pfx
+config/secrets.yml
+*_rsa
+*_rsa.pub
+*.gpg
+
+# ===== DATABASE FILES =====
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
+
+# ===== LOGS & DEBUGGING =====
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# ===== NODE MODULES =====
+node_modules/
+jspm_packages/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ===== BUILD OUTPUTS =====
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+
+# ===== MEMORY FILES (SENSITIVE!) =====
+# These may contain personal/investigation data
+memories/
+.claude/memories/
+*.memory.md
+memory-backups/
+personal-memories/
+
+# ===== IDE & EDITOR =====
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ===== TEMPORARY FILES =====
+tmp/
+temp/
+*.tmp
+*.temp
+.temp
+
+# ===== TESTING =====
+coverage/
+.nyc_output/
+*.lcov
+
+# ===== MONGODB EXPORTS (MAY CONTAIN SENSITIVE DATA) =====
+*.json.export
+mongodb-exports/
+db-backups/
+
+# ===== PRIVATE INVESTIGATIONS =====
+# CRITICAL: Never commit investigation data!
+investigations/
+threat-actors/
+case-files/
+evidence/
+*-investigation-*.md
+*-threat-*.json
+*-case-*.json
+
+# ===== PERSONAL INFORMATION =====
+personal/
+private/
+confidential/
+*-personal-*.md
+*-private-*.json
+
+# ===== SYSTEM FILES =====
+.npm
+.eslintcache
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# ===== MACOS =====
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# ===== LINUX =====
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ===== WINDOWS =====
+Desktop.ini
+ehthumbs.db
+ehthumbs_vista.db
+
+# ===== BACKUP FILES =====
+*.bak
+*.backup
+*.old
+*~
+
+# ===== SECURITY TOOLS =====
+.gitleaks.toml
+gitleaks-report.json
